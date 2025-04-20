@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sftp2s3"
+version = "0.1.0"
+description = "A minimal Python tool to synchronize files from an SFTP server to an Amazon S3 bucket."
+authors = [
+  { name="Davi Guides", email="davi.guides@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "boto3",
+  "paramiko",
+  "PyYAML",
+  "click"
+]
+
+[project.scripts]
+sftp2s3 = "sftp_to_s3_sync.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/daviguides/sftp2s3"
+"Repository" = "https://github.com/daviguides/sftp2s3"
+
+[tool.setuptools.packages.find]
+include = ["sftp_to_s3_sync"]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+]

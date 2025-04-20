@@ -1,0 +1,15 @@
+s3:
+  bucket: your-s3-bucket-name
+  key_prefix: optional-prefix/
+  aws_access_key_id: your-aws-access-key
+  aws_secret_access_key: your-aws-secret-key
+  endpoint_url: optional-endpoint-url
+
+sftp:
+  hostname: your.sftp.server
+  username: your-username
+  password: your-password
+  port: 22
+
+incremental_sync:
+  last_modified_s3_key: path/to/last_sync_marker.txt
