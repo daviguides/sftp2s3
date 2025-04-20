@@ -1,6 +1,6 @@
 # Makefile for sftp2s3 project using uv
 
-.PHONY: install install-dev install-uv format lint test run
+.PHONY: install install-dev install-uv format lint test run setup-config
 
 # Install uv if not already installed
 install-uv:
